@@ -1,0 +1,7 @@
+c-composite-pattern
+test
+
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
