@@ -12,11 +12,25 @@ TEST(MultTest, MultEvaluateNonZero) {
     EXPECT_EQ(test->evaluate(), 40);
 }
 
+TEST(MultTest, MultEvaluateNegative) {
+    Base* negEight = new Op(-8);
+    Base* five = new Op(5);
+    Mult* test = new Mult(negEight, five);
+    EXPECT_EQ(test->evaluate(), -40);
+}
+
 TEST(MultTest, MultStringifyTwoOps) {
     Base* eight = new Op(8);
     Base* five = new Op(5);
     Mult* test = new Mult(eight, five);
-    EXPECT_EQ(test->stringify(), "(8*5)");
+    EXPECT_EQ(test->stringify(), "(8.000000 * 5.000000)");
+}
+
+TEST(MultTest, MultStringifyNegative) {
+    Base* negEight = new Op(-8);
+    Base* five = new Op(5);
+    Mult* test = new Mult(negEight, five);
+    EXPECT_EQ(test->stringify(), "(-8.000000 * 5.000000)");
 }
 
 

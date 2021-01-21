@@ -10,7 +10,7 @@ class Mult : public Base {
     public:
         Mult(Base* x, Base* y) : Base(), x(x), y(y) { }
         virtual double evaluate() { return x->evaluate() * y->evaluate(); }
-        virtual std::string stringify() { "(" + x->stringify() + "*" + y->stringify() + ")"; }
+        virtual std::string stringify() { return "(" + x->stringify() + " * " + y->stringify() + ")"; }
 };
 
 #endif //__MULT_HPP__
