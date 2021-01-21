@@ -4,7 +4,7 @@ ADD_SUBDIRECTORY(googletest)
 
 SET(CMAKE_CXX_STANDARD 11)
 
-ADD_EXECUTABLE(c-composite-pattern
+ADD_EXECUTABLE(lab
 	main.cpp
 )
 
