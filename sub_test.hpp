@@ -3,13 +3,14 @@
 
 #include "gtest/gtest.h"
 
+#include "op.hpp"
 #include "sub.hpp"
 
 TEST(SubTest, SubTwelve) {
         Op* num1 = new Op(4);
         Op* num2 = new Op(8);
         Sub* test = new Sub(num1, num2);
-        EXPECT_EQ(test->evaluate(), -8);
+        EXPECT_EQ(test->evaluate(), -4);
 }
 
 TEST(StringTest, SubTwelve) {
@@ -27,8 +28,8 @@ TEST(SubNegative, SubTen) {
 }
 
 TEST(StringNegative, SubTen) {
-        Op* num2 = new Op(4);
-        Op* num1 = new Op(-6);
+        Op* num1 = new Op(4);
+        Op* num2 = new Op(-6);
         Sub* test = new Sub(num1, num2);
         EXPECT_EQ(test->stringify(), "(4.000000 - -6.000000)");
 }
